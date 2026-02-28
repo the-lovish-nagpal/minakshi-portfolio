@@ -1,14 +1,6 @@
-@import "tailwindcss";
-
-@theme inline {
-  --color-yellow-brand: #F5E027;
-  --color-yellow-light: #f7e94d;
-  --color-dark-brand: #1a1a1a;
-  --color-dark-bg: #1c1c1c;
-  --color-light-brand: #f9f9f5;
-  --font-display: var(--font-anton);
-  --font-body: var(--font-inter);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* ── Reset ── */
 * {
