@@ -4,6 +4,7 @@ import "./globals.css";
 import CustomCursor from "./components/CustomCursor";
 import Preloader from "./components/Preloader";
 import BackToTop from "./components/BackToTop";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const anton = Anton({
   weight: "400",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <CustomCursor />
         {children}
         <BackToTop />
+        <SpeedInsights />
       </body>
     </html>
   );
