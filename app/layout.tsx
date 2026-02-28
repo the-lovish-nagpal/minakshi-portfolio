@@ -5,6 +5,7 @@ import CustomCursor from "./components/CustomCursor";
 import Preloader from "./components/Preloader";
 import BackToTop from "./components/BackToTop";
 
+
 const anton = Anton({
   weight: "400",
   variable: "--font-anton",
