@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowDownRight } from "lucide-react";
 import { FadeIn, FadeInLeft, FadeInRight, ScaleIn } from "./Animations";
 
@@ -29,10 +30,10 @@ export default function ClientsSection() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-8 flex-1">
-                    {[1, 2, 3].map((i) => (
-                        <ScaleIn key={i} delay={i * 0.15}>
-                            <div className="aspect-video rounded-lg photo-placeholder photo-placeholder-dark shadow-lg">
-                                <span className="px-4 text-xs">Client Work {i}</span>
+                    {["/images/yt-thumb-1.jpg", "/images/yt-thumb-2.jpg", "/images/yt-thumb-3.jpg"].map((src, i) => (
+                        <ScaleIn key={i} delay={(i + 1) * 0.15}>
+                            <div className="aspect-video rounded-lg shadow-lg relative overflow-hidden">
+                                <Image src={src} alt={`Client Work ${i + 1}`} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: "cover" }} />
                             </div>
                         </ScaleIn>
                     ))}

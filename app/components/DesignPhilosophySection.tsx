@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowDownRight } from "lucide-react";
 import { FadeIn, FadeInLeft, FadeInRight } from "./Animations";
 
@@ -27,9 +28,15 @@ export default function DesignPhilosophySection() {
                     </blockquote>
                 </FadeInLeft>
 
-                <FadeIn delay={0.2} className="lg:w-[30%] flex items-center justify-center">
-                    <div className="w-full h-[300px] md:h-[400px] lg:h-full photo-placeholder rounded-sm shadow-lg">
-                        <span className="px-4">Work Sample<br />Image</span>
+                <FadeIn delay={0.2} className="lg:w-[30%] flex items-stretch">
+                    <div className="relative w-full min-h-[350px] md:min-h-[450px] rounded-sm shadow-lg overflow-hidden" style={{ backgroundColor: "#e8e4dc" }}>
+                        <Image
+                            src="/images/wellness-city-brochure.jpg"
+                            alt="The Wellness City - PLPB Brochure Design"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 30vw"
+                            style={{ objectFit: "contain", objectPosition: "center" }}
+                        />
                     </div>
                 </FadeIn>
 
@@ -42,8 +49,14 @@ export default function DesignPhilosophySection() {
                     </FadeInRight>
 
                     <FadeIn delay={0.4}>
-                        <div className="w-32 h-40 md:w-40 md:h-48 photo-placeholder rounded-sm shadow-md self-end">
-                            <span className="text-xs px-2">Photo</span>
+                        <div className="w-32 h-40 md:w-40 md:h-48 rounded-sm shadow-md self-end overflow-hidden relative">
+                            <Image
+                                src="/images/minakshi-about.jpg"
+                                alt="Minakshi Banerjee"
+                                fill
+                                sizes="160px"
+                                style={{ objectFit: "cover", objectPosition: "top center" }}
+                            />
                         </div>
                     </FadeIn>
 

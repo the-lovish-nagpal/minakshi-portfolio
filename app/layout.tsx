@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${anton.variable} ${inter.variable} antialiased`}>
+      <body className={`${anton.variable} ${inter.variable} antialiased bg-dark-bg overflow-x-hidden`}>
         <Preloader />
         <CustomCursor />
         {children}

@@ -49,15 +49,29 @@ export default function Home() {
       {/* 06 — Creative Output: Affecté */}
       <CreativeOutputSection
         sectionNumber="05"
-        brandColor="#F5E027"
+        brandColor="#E8755A"
         outputs={affecteOutputs}
+        images={[
+          "/images/affecte-bag.jpg",
+          "/images/affecte-tshirt.jpg",
+          "/images/affecte-letterhead.jpg",
+          "/images/affecte-stationery.jpg",
+          "/images/affecte-sign.jpg",
+          "/images/affecte-phone.jpg",
+        ]}
+        rightImage="/images/affecte-logo.jpg"
       />
 
       {/* 07 — Creative Output: Park Greens */}
       <CreativeOutputSection
         sectionNumber="06"
-        brandColor="#e8755a"
+        brandColor="#2D6A4F"
         outputs={parkGreensOutputs}
+        images={[]} // Images are handled inside the parkgreens-masonry variant
+        rightImage="/images/parkgreens-logo.jpg"
+        gridVariant="parkgreens-masonry"
+        rightImagePosition="left top"
+        outputTextColor="#e8755a"
       />
 
       {/* 08 — Design Philosophy */}
@@ -69,6 +83,11 @@ export default function Home() {
         category=""
         bgColor="#ffffff"
         textColor="#000"
+        images={[
+          "/images/affecte-whitetea.jpg",
+          "/images/affecte-rose.jpg",
+          "/images/affecte-jasmine.jpg",
+        ]}
       />
 
       {/* 10 — Selected Works: UI Design (Beauty) */}
@@ -77,6 +96,11 @@ export default function Home() {
         category="UI Designs"
         bgColor="#e8cfa0"
         textColor="#000"
+        images={[
+          "/images/beauty-1.jpg",
+          "/images/beauty-2.jpg",
+          "/images/beauty-3.jpg",
+        ]}
       />
 
       {/* 11 — Selected Works: UI Design (Edulan) */}
@@ -85,6 +109,11 @@ export default function Home() {
         category="UI Designs"
         bgColor="#c8e6c0"
         textColor="#000"
+        images={[
+          "/images/edulan-1.jpg",
+          "/images/edulan-2.jpg",
+          "/images/edulan-3.jpg",
+        ]}
       />
 
       {/* 12 — Selected Works: UI Design (Bakery) */}
@@ -93,6 +122,11 @@ export default function Home() {
         category="UI Designs"
         bgColor="#d4a76a"
         textColor="#000"
+        images={[
+          "/images/bakery-1.jpg",
+          "/images/bakery-2.jpg",
+          "/images/bakery-3.jpg",
+        ]}
       />
 
       {/* 13 — Selected Works: UI Design (Camping) */}
@@ -101,15 +135,69 @@ export default function Home() {
         category="UI Designs"
         bgColor="#a89880"
         textColor="#000"
+        images={[
+          "/images/camping-1.jpg",
+          "/images/camping-2.jpg",
+          "/images/camping-3.jpg",
+        ]}
       />
 
-      {/* 14 — Selected Works: Insta Works */}
+      {/* 14 — Selected Works: YouTube Thumbnails */}
       <SelectedWorksSection
         sectionNumber="13"
+        category="YouTube Thumbnails"
+        bgColor="#1a1a1a"
+        textColor="#fff"
+        images={[
+          "/images/yt-thumb-1.jpg",
+          "/images/yt-thumb-2.jpg",
+          "/images/yt-thumb-3.jpg",
+          "/images/yt-thumb-4.jpg",
+          "/images/yt-thumb-5.jpg",
+          "/images/yt-thumb-6.jpg",
+          "/images/yt-thumb-7.jpg",
+          "/images/yt-thumb-8.jpg",
+          "/images/yt-thumb-9.jpg",
+          "/images/yt-thumb-10.jpg",
+          "/images/yt-thumb-11.jpg",
+          "/images/yt-thumb-12.jpg",
+          "/images/yt-thumb-13.jpg",
+          "/images/yt-thumb-14.jpg",
+          "/images/yt-thumb-15.jpg",
+        ]}
+      />
+
+      {/* 15 — Selected Works: Insta Works */}
+      <SelectedWorksSection
+        sectionNumber="14"
         category="Insta Works"
         bgColor="#3030cc"
         textColor="#fff"
-        projectCount={2}
+        images={[
+          "/images/insta-1.jpg",
+          "/images/insta-2.jpg",
+          "/images/insta-3.jpg",
+          "/images/insta-4.jpg",
+          "/images/insta-5.jpg",
+          "/images/insta-6.jpg",
+          "/images/insta-7.jpg",
+          "/images/insta-8.jpg",
+          "/images/insta-9.jpg",
+          "/images/insta-10.jpg",
+          "/images/insta-11.jpg",
+          "/images/insta-12.jpg",
+          "/images/insta-13.jpg",
+          "/images/insta-14.jpg",
+          "/images/insta-15.jpg",
+          "/images/insta-16.jpg",
+          "/images/insta-17.jpg",
+          "/images/insta-18.jpg",
+          "/images/insta-19.jpg",
+          "/images/insta-20.jpg",
+          "/images/insta-21.jpg",
+          "/images/insta-22.jpg",
+          "/images/insta-23.jpg",
+        ]}
       />
 
       {/* 15-16 — Clients & Collaborations */}

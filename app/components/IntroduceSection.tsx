@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FadeIn, FadeInLeft, FadeInRight } from "./Animations";
 
 export default function IntroduceSection() {
@@ -59,11 +60,18 @@ export default function IntroduceSection() {
                     </FadeIn>
                 </div>
 
-                {/* Right column — photo placeholder */}
+                {/* Right column — photo */}
                 <FadeInRight delay={0.3} className="w-full md:w-[380px] lg:w-[440px] flex-shrink-0">
                     <div className="relative w-full h-[400px] md:h-full border-2 border-yellow-brand/30 p-1">
-                        <div className="photo-placeholder photo-placeholder-dark w-full h-full">
-                            <span className="px-4">Photo of Minakshi<br />Add to public/minakshi-1.jpg</span>
+                        <div className="relative w-full h-full overflow-hidden">
+                            <Image
+                                src="/images/minakshi-introduce.jpg"
+                                alt="Minakshi Banerjee"
+                                fill
+                                priority
+                                sizes="(max-width: 768px) 100vw, 440px"
+                                style={{ objectFit: "cover", objectPosition: "top center" }}
+                            />
                         </div>
                     </div>
                 </FadeInRight>

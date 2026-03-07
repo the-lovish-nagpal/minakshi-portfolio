@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowDownRight } from "lucide-react";
 import { FadeIn, FadeInLeft, FadeInRight } from "./Animations";
 
@@ -35,10 +36,14 @@ export default function AboutSection() {
 
                 {/* Photo */}
                 <FadeIn delay={0.2} className="w-full md:w-[300px] lg:w-[360px] flex-shrink-0 flex items-center">
-                    <div className="relative w-full h-[400px] md:h-[500px] lg:h-[540px] shadow-2xl">
-                        <div className="photo-placeholder w-full h-full">
-                            <span className="px-4">Photo of Minakshi<br />Add to public/minakshi-2.jpg</span>
-                        </div>
+                    <div className="relative w-full h-[400px] md:h-[500px] lg:h-[540px] shadow-2xl overflow-hidden">
+                        <Image
+                            src="/images/minakshi-about.jpg"
+                            alt="Minakshi Banerjee"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 360px"
+                            style={{ objectFit: "cover", objectPosition: "top center" }}
+                        />
                     </div>
                 </FadeIn>
 

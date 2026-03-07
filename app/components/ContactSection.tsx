@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FadeIn, FadeInLeft, FadeInRight } from "./Animations";
 
 export default function ContactSection() {
@@ -67,8 +68,14 @@ export default function ContactSection() {
 
                 {/* Right — photo */}
                 <FadeInRight delay={0.3} className="lg:w-[40%] flex items-start justify-end">
-                    <div className="w-full max-w-[350px] h-[350px] md:h-[420px] photo-placeholder rounded-lg shadow-xl overflow-hidden">
-                        <span className="px-4">Photo of Minakshi<br />Add to public/minakshi-3.jpg</span>
+                    <div className="w-full max-w-[350px] h-[350px] md:h-[420px] rounded-lg shadow-xl overflow-hidden relative">
+                        <Image
+                            src="/images/minakshi-contact-v2.jpg"
+                            alt="Minakshi Banerjee"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 350px"
+                            style={{ objectFit: "cover", objectPosition: "top center" }}
+                        />
                     </div>
                 </FadeInRight>
             </div>

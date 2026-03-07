@@ -30,6 +30,16 @@ body {
   background-size: 200px 200px;
 }
 
+/* ── Content containment: backgrounds full-width, content centered ── */
+section {
+  align-items: center;
+}
+
+section > *:not(.grain-overlay):not(.swoosh-container) {
+  max-width: 1920px;
+  width: 100%;
+}
+
 /* ── Photo placeholder ── */
 .photo-placeholder {
   display: flex;
