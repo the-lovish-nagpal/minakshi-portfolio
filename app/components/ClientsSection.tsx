@@ -20,7 +20,7 @@ export default function ClientsSection() {
             <div className="relative z-10 flex-1 flex flex-col px-8 md:px-16 py-8 md:py-12">
                 <div className="flex items-start justify-between mb-8">
                     <FadeInLeft>
-                        <span className="font-display text-5xl md:text-7xl text-white/40 leading-none">14</span>
+                        <span className="font-display text-5xl md:text-7xl text-white/40 leading-none">15</span>
                     </FadeInLeft>
                     <FadeIn delay={0.2}>
                         <h2 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-tight uppercase text-center flex-1">
@@ -29,11 +29,11 @@ export default function ClientsSection() {
                     </FadeIn>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-8 flex-1">
-                    {["/images/yt-thumb-1.jpg", "/images/yt-thumb-2.jpg", "/images/yt-thumb-3.jpg"].map((src, i) => (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4 mb-8 flex-1">
+                    {["/images/client-1.jpg", "/images/client-2.jpg", "/images/client-3.jpg", "/images/client-4.jpg", "/images/client-5.jpg"].map((src, i) => (
                         <ScaleIn key={i} delay={(i + 1) * 0.15}>
-                            <div className="aspect-video rounded-lg shadow-lg relative overflow-hidden">
-                                <Image src={src} alt={`Client Work ${i + 1}`} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: "cover" }} />
+                            <div className="aspect-square rounded-lg shadow-lg relative overflow-hidden">
+                                <Image src={src} alt={`Client Work ${i + 1}`} fill sizes="(max-width: 768px) 50vw, 20vw" style={{ objectFit: "cover" }} />
                             </div>
                         </ScaleIn>
                     ))}
