@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FadeIn, FadeInLeft, FadeInRight, ScaleIn, StaggerContainer, StaggerItem } from "./Animations";
 
 export default function ImpactSection() {
@@ -30,13 +31,25 @@ export default function ImpactSection() {
 
                     <div className="grid grid-cols-2 gap-4 mt-8">
                         <ScaleIn delay={0.2}>
-                            <div className="aspect-square rounded-lg photo-placeholder photo-placeholder-dark">
-                                <span className="text-xs px-2">Illustration 1</span>
+                            <div className="aspect-square rounded-lg overflow-hidden relative">
+                                <Image
+                                    src="/images/illustration-1.jpg"
+                                    alt="Illustration 1"
+                                    fill
+                                    sizes="(max-width: 768px) 50vw, 25vw"
+                                    style={{ objectFit: "cover" }}
+                                />
                             </div>
                         </ScaleIn>
                         <ScaleIn delay={0.3}>
-                            <div className="aspect-square rounded-lg photo-placeholder photo-placeholder-dark">
-                                <span className="text-xs px-2">Illustration 2</span>
+                            <div className="aspect-square rounded-lg overflow-hidden relative">
+                                <Image
+                                    src="/images/illustration-2.jpg"
+                                    alt="Illustration 2"
+                                    fill
+                                    sizes="(max-width: 768px) 50vw, 25vw"
+                                    style={{ objectFit: "cover" }}
+                                />
                             </div>
                         </ScaleIn>
                     </div>
@@ -68,13 +81,25 @@ export default function ImpactSection() {
 
                     <div className="grid grid-cols-2 gap-4 mt-8">
                         <ScaleIn delay={0.4}>
-                            <div className="aspect-square rounded-lg photo-placeholder photo-placeholder-dark">
-                                <span className="text-xs px-2">Illustration 3</span>
+                            <div className="aspect-square rounded-lg overflow-hidden relative">
+                                <Image
+                                    src="/images/illustration-3.jpg"
+                                    alt="Illustration 3"
+                                    fill
+                                    sizes="(max-width: 768px) 50vw, 25vw"
+                                    style={{ objectFit: "cover" }}
+                                />
                             </div>
                         </ScaleIn>
                         <ScaleIn delay={0.5}>
-                            <div className="aspect-square rounded-lg photo-placeholder photo-placeholder-dark">
-                                <span className="text-xs px-2">Illustration 4</span>
+                            <div className="aspect-square rounded-lg overflow-hidden relative">
+                                <Image
+                                    src="/images/illustration-4.jpg"
+                                    alt="Illustration 4"
+                                    fill
+                                    sizes="(max-width: 768px) 50vw, 25vw"
+                                    style={{ objectFit: "cover" }}
+                                />
                             </div>
                         </ScaleIn>
                     </div>
