@@ -57,14 +57,15 @@ export default function SelectedWorksSection({
                         {/* Left card - behind, to the left */}
                         <StaggerItem>
                             <div
-                                className="absolute rounded-lg overflow-hidden shadow-xl"
+                                className="absolute rounded-lg overflow-hidden"
                                 style={{
-                                    left: "2%",
+                                    left: "5%",
                                     top: "50%",
                                     transform: "translateY(-50%)",
-                                    width: "34%",
-                                    height: "80%",
+                                    width: "38%",
+                                    height: "85%",
                                     zIndex: 1,
+                                    background: bgColor,
                                 }}
                             >
                                 <Image
@@ -72,7 +73,7 @@ export default function SelectedWorksSection({
                                     alt="Work 1"
                                     fill
                                     sizes="35vw"
-                                    style={{ objectFit: "cover", objectPosition: "top center" }}
+                                    style={{ objectFit: "contain", objectPosition: "center center", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }}
                                 />
                             </div>
                         </StaggerItem>
@@ -80,14 +81,15 @@ export default function SelectedWorksSection({
                         {/* Center card - in front, larger, overlapping */}
                         <StaggerItem>
                             <div
-                                className="absolute rounded-lg overflow-hidden shadow-2xl"
+                                className="absolute rounded-lg overflow-hidden"
                                 style={{
                                     left: "50%",
                                     top: "50%",
                                     transform: "translate(-50%, -50%)",
-                                    width: "38%",
-                                    height: "95%",
+                                    width: "42%",
+                                    height: "98%",
                                     zIndex: 3,
+                                    background: bgColor,
                                 }}
                             >
                                 <Image
@@ -95,7 +97,7 @@ export default function SelectedWorksSection({
                                     alt="Work 2"
                                     fill
                                     sizes="40vw"
-                                    style={{ objectFit: "cover", objectPosition: "top center" }}
+                                    style={{ objectFit: "contain", objectPosition: "center center", filter: "drop-shadow(0 6px 16px rgba(0,0,0,0.3))" }}
                                 />
                             </div>
                         </StaggerItem>
@@ -103,14 +105,15 @@ export default function SelectedWorksSection({
                         {/* Right card - behind, to the right */}
                         <StaggerItem>
                             <div
-                                className="absolute rounded-lg overflow-hidden shadow-xl"
+                                className="absolute rounded-lg overflow-hidden"
                                 style={{
-                                    right: "2%",
+                                    right: "5%",
                                     top: "50%",
                                     transform: "translateY(-50%)",
-                                    width: "34%",
-                                    height: "80%",
+                                    width: "38%",
+                                    height: "85%",
                                     zIndex: 1,
+                                    background: bgColor,
                                 }}
                             >
                                 <Image
@@ -118,7 +121,7 @@ export default function SelectedWorksSection({
                                     alt="Work 3"
                                     fill
                                     sizes="35vw"
-                                    style={{ objectFit: "cover", objectPosition: "top center" }}
+                                    style={{ objectFit: "contain", objectPosition: "center center", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }}
                                 />
                             </div>
                         </StaggerItem>
@@ -126,10 +129,10 @@ export default function SelectedWorksSection({
                 ) : (
                     /* Standard grid for other sections */
                     <div className={`w-full grid gap-4 md:gap-6 ${count <= 3
-                            ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-                            : count <= 8
-                                ? "grid-cols-2 lg:grid-cols-4"
-                                : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+                        ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                        : count <= 8
+                            ? "grid-cols-2 lg:grid-cols-4"
+                            : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
                         }`}>
                         {Array.from({ length: count }).map((_, i) => (
                             <StaggerItem key={i}>
