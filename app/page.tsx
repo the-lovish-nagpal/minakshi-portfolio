@@ -155,8 +155,6 @@ export default function Home() {
           "/images/yt-thumb-4.jpg",
           "/images/yt-thumb-5.jpg",
           "/images/yt-thumb-6.jpg",
-          "/images/yt-thumb-7.jpg",
-          "/images/yt-thumb-8.jpg",
           "/images/yt-thumb-9.jpg",
           "/images/yt-thumb-10.jpg",
           "/images/yt-thumb-11.jpg",
@@ -167,18 +165,27 @@ export default function Home() {
         ]}
       />
 
-      {/* 15 — Selected Works: Insta Works */}
+      {/* 15 — Selected Works: Thumbnail */}
       <SelectedWorksSection
         sectionNumber="14"
-        category="Insta Works"
-        bgColor="#3030cc"
+        category="Thumbnail"
+        bgColor="#1a1a1a"
         textColor="#fff"
         images={[
-          "/images/insta-1.jpg",
           "/images/insta-2.jpg",
           "/images/insta-3.jpg",
           "/images/insta-4.jpg",
           "/images/insta-5.jpg",
+        ]}
+      />
+
+      {/* 16 — Selected Works: Insta Works */}
+      <SelectedWorksSection
+        sectionNumber="15"
+        category="Insta Works"
+        bgColor="#3030cc"
+        textColor="#fff"
+        images={[
           "/images/insta-7.jpg",
           "/images/insta-9.jpg",
           "/images/insta-10.jpg",

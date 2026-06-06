@@ -136,7 +136,7 @@ export default function SelectedWorksSection({
                         }`}>
                         {Array.from({ length: count }).map((_, i) => (
                             <StaggerItem key={i}>
-                                <div className={`${category.toLowerCase().includes("youtube") ? "aspect-video" : "aspect-[5/6]"} rounded-lg overflow-hidden shadow-lg relative`}>
+                                <div className={`${category.toLowerCase().includes("youtube") || category.toLowerCase().includes("thumbnail") ? "aspect-video" : "aspect-[5/6]"} rounded-lg overflow-hidden shadow-lg relative`}>
                                     {images[i] ? (
                                         <Image
                                             src={images[i]}
