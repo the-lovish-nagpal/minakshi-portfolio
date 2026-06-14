@@ -32,6 +32,11 @@ export default function SelectedWorksSection({
             images[0].includes("camping")
         ));
 
+    const isBeauty = images.length > 0 && images[0].includes("beauty");
+    const isAffecte = images.length > 0 && images[0].includes("affecte");
+    const isEcom = images.length > 0 && images[0].includes("ecom");
+    const isInsta = images.length > 0 && images[0].includes("insta");
+
     // Responsive width classes based on image count
     const lgWidth = count <= 3
         ? "lg:w-[calc(33.333%-16px)]"
@@ -40,7 +45,7 @@ export default function SelectedWorksSection({
             : "lg:w-[calc(20%-19px)]";
 
     return (
-        <section className="relative w-full min-h-screen md:h-screen overflow-hidden flex flex-col" style={{ background: bgColor }}>
+        <section className="relative w-full min-h-screen overflow-hidden flex flex-col" style={{ background: bgColor }}>
             {/* Header */}
             <div className="relative z-10 flex items-start justify-between px-8 md:px-16 pt-8 gap-4 flex-shrink-0">
                 <FadeInLeft>
@@ -66,7 +71,7 @@ export default function SelectedWorksSection({
             )}
 
             {/* Works display */}
-            <div id={`grid-${sectionNumber}`} className="relative z-10 flex-1 overflow-y-auto w-full px-4 md:px-8 py-4 md:py-8 custom-scrollbar flex flex-col items-center">
+            <div id={`grid-${sectionNumber}`} className="relative z-10 flex-1 w-full px-4 md:px-8 py-4 md:py-8 flex flex-col items-center">
                 <StaggerContainer
                     className="w-full max-w-[1600px] my-auto flex flex-wrap justify-center gap-4 md:gap-6"
                 >
@@ -75,7 +80,17 @@ export default function SelectedWorksSection({
                             key={i}
                             className={`w-[calc(50%-8px)] sm:w-[calc(50%-12px)] ${lgWidth} flex-shrink-0`}
                         >
-                            <div className={`${isLandscape ? "aspect-video" : "aspect-[5/6]"} rounded-lg overflow-hidden shadow-lg relative w-full`}>
+                            <div className={`${
+                                isLandscape
+                                    ? "aspect-video"
+                                    : isBeauty
+                                        ? "aspect-[402/874]"
+                                        : isAffecte
+                                            ? "aspect-[3/4]"
+                                            : (isEcom || isInsta)
+                                                ? "aspect-[4/5]"
+                                                : "aspect-[5/6]"
+                            } rounded-lg overflow-hidden shadow-lg relative w-full`}>
                                 {images[i] ? (
                                     <Image
                                         src={images[i]}
