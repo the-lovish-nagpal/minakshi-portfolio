@@ -73,7 +73,7 @@ export default function AboutSection() {
 
                     <FadeIn delay={0.6}>
                         <p className="mt-6 text-sm md:text-base text-black/80 leading-relaxed max-w-lg font-body" style={{ textAlign: "justify" }}>
-                            With over 1 year of experience, I specialise in branding, digital
+                            With over 2 years+ of experience, I specialise in branding, digital
                             content, and visual communication. My work blends aesthetics with
                             clarity to help brands connect with their audiences. I thrive in
                             both collaborative and independent environments, always striving to

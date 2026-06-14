@@ -45,7 +45,7 @@ export default function IntroduceSection() {
 
                     <FadeIn delay={0.5}>
                         <p className="mt-6 md:mt-8 text-yellow-brand/90 text-sm md:text-base leading-relaxed max-w-xl font-body" style={{ textAlign: "justify" }}>
-                            I am a passionate Graphic Designer with one year of professional
+                            I am a passionate Graphic Designer with two years of professional
                             experience creating visually engaging and brand-consistent designs
                             across digital and print media. My work combines creativity with
                             strategic thinking to communicate messages effectively and elevate

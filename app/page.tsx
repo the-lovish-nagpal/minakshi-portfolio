@@ -162,16 +162,7 @@ export default function Home() {
           "/images/yt-thumb-13.jpg",
           "/images/yt-thumb-14.jpg",
           "/images/yt-thumb-15.jpg",
-        ]}
-      />
-
-      {/* 15 — Selected Works: Thumbnail */}
-      <SelectedWorksSection
-        sectionNumber="14"
-        category="Thumbnail"
-        bgColor="#1a1a1a"
-        textColor="#fff"
-        images={[
+          "/images/insta-7.jpg",
           "/images/insta-2.jpg",
           "/images/insta-3.jpg",
           "/images/insta-4.jpg",
@@ -179,30 +170,46 @@ export default function Home() {
         ]}
       />
 
-      {/* 16 — Selected Works: Insta Works */}
+      {/* 15 — Selected Works: Insta Works */}
       <SelectedWorksSection
-        sectionNumber="15"
+        sectionNumber="14"
         category="Insta Works"
         bgColor="#3030cc"
         textColor="#fff"
         images={[
-          "/images/insta-7.jpg",
           "/images/insta-9.jpg",
           "/images/insta-10.jpg",
           "/images/insta-14.jpg",
-          "/images/insta-16.jpg",
           "/images/insta-17.jpg",
           "/images/insta-22.jpg",
         ]}
       />
 
-      {/* 15-16 — Clients & Collaborations */}
+      {/* 16 — Selected Works: Ecommerce */}
+      <SelectedWorksSection
+        sectionNumber="15"
+        category="Ecommerce"
+        bgColor="#1a2e2e"
+        textColor="#fff"
+        images={[
+          "/images/ecom-1.jpg",
+          "/images/ecom-2.jpg",
+          "/images/ecom-3.jpg",
+          "/images/ecom-4.jpg",
+          "/images/ecom-5.jpg",
+          "/images/ecom-6.jpg",
+          "/images/ecom-7.jpg",
+          "/images/ecom-8.jpg",
+        ]}
+      />
+
+      {/* 17 — Clients & Collaborations */}
       <ClientsSection />
 
-      {/* 17 — Impact & Results */}
+      {/* 18 — Impact & Results */}
       <ImpactSection />
 
-      {/* 18 — Contact */}
+      {/* 19 — Contact */}
       <ContactSection />
     </main>
   );

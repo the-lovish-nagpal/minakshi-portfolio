@@ -25,7 +25,7 @@ export default function ImpactSection() {
                     <FadeInLeft>
                         <div>
                             <h2 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-yellow-brand leading-[0.85] tracking-tight uppercase">Impact</h2>
-                            <span className="font-display text-5xl md:text-7xl text-yellow-brand/50 ml-4">16</span>
+                            <span className="font-display text-5xl md:text-7xl text-yellow-brand/50 ml-4">17</span>
                         </div>
                     </FadeInLeft>
 

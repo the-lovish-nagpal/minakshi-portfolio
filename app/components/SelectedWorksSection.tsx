@@ -21,12 +21,15 @@ export default function SelectedWorksSection({
     images = [],
 }: SelectedWorksProps) {
     const count = images.length > 0 ? images.length : projectCount;
-    const isUIDesign = count <= 3 && category.toLowerCase().includes("ui") && images.length === 3;
+    const catLower = (category || "").toLowerCase();
+    const isUIDesign = count <= 3 && catLower.includes("ui") && images.length === 3;
+
+    const isLandscape = catLower.includes("youtube") || catLower.includes("thumbnail");
 
     return (
-        <section className="relative w-full min-h-screen overflow-hidden flex flex-col" style={{ background: bgColor }}>
+        <section className="relative w-full min-h-screen md:h-screen overflow-hidden flex flex-col" style={{ background: bgColor }}>
             {/* Header */}
-            <div className="relative z-10 flex items-start justify-between px-8 md:px-16 pt-8 gap-4">
+            <div className="relative z-10 flex items-start justify-between px-8 md:px-16 pt-8 gap-4 flex-shrink-0">
                 <FadeInLeft>
                     <h2 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight uppercase" style={{ color: textColor }}>
                         Selected Works
@@ -42,7 +45,7 @@ export default function SelectedWorksSection({
             </div>
 
             {category && (
-                <FadeIn>
+                <FadeIn className="flex-shrink-0">
                     <div className="relative z-10 px-8 md:px-16 mt-2">
                         <span className="font-display text-base md:text-lg tracking-wider uppercase" style={{ color: textColor }}>{category}</span>
                     </div>
@@ -50,12 +53,12 @@ export default function SelectedWorksSection({
             )}
 
             {/* Works display */}
-            <StaggerContainer className="relative z-10 flex-1 flex items-center px-4 md:px-8 py-6 md:py-10">
-                {isUIDesign ? (
-                    /* Overlapping card layout for UI Designs - matches template */
+            {isUIDesign ? (
+                <StaggerContainer className="relative z-10 flex-1 flex items-center justify-center px-4 md:px-8 py-4 md:py-8 min-h-0 w-full">
+                    {/* Overlapping card layout for UI Designs - matches template */}
                     <div className="w-full relative" style={{ height: "60vh", minHeight: "380px" }}>
                         {/* Left card - behind, to the left */}
-                        <StaggerItem>
+                        <StaggerItem className="absolute inset-0">
                             <div
                                 className="absolute rounded-lg overflow-hidden"
                                 style={{
@@ -79,7 +82,7 @@ export default function SelectedWorksSection({
                         </StaggerItem>
 
                         {/* Center card - in front, larger, overlapping */}
-                        <StaggerItem>
+                        <StaggerItem className="absolute inset-0">
                             <div
                                 className="absolute rounded-lg overflow-hidden"
                                 style={{
@@ -103,7 +106,7 @@ export default function SelectedWorksSection({
                         </StaggerItem>
 
                         {/* Right card - behind, to the right */}
-                        <StaggerItem>
+                        <StaggerItem className="absolute inset-0">
                             <div
                                 className="absolute rounded-lg overflow-hidden"
                                 style={{
@@ -126,23 +129,24 @@ export default function SelectedWorksSection({
                             </div>
                         </StaggerItem>
                     </div>
-                ) : (
-                    /* Standard grid for other sections */
-                    <div className={`w-full grid gap-4 md:gap-6 ${count <= 3
-                        ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-                        : count <= 8
-                            ? "grid-cols-2 lg:grid-cols-4"
-                            : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
-                        }`}>
+                </StaggerContainer>
+            ) : (
+                <div id={`grid-${sectionNumber}`} className="relative z-10 flex-1 overflow-y-auto w-full px-4 md:px-8 py-4 md:py-8 custom-scrollbar flex flex-col items-center">
+                    <StaggerContainer
+                        className="w-full max-w-7xl my-auto flex flex-wrap justify-center gap-4 md:gap-6"
+                    >
                         {Array.from({ length: count }).map((_, i) => (
-                            <StaggerItem key={i}>
-                                <div className={`${category.toLowerCase().includes("youtube") || category.toLowerCase().includes("thumbnail") ? "aspect-video" : "aspect-[5/6]"} rounded-lg overflow-hidden shadow-lg relative`}>
+                            <StaggerItem
+                                key={i}
+                                className="w-[calc(50%-8px)] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] flex-shrink-0"
+                            >
+                                <div className={`${isLandscape ? "aspect-video" : "aspect-[5/6]"} rounded-lg overflow-hidden shadow-lg relative w-full`}>
                                     {images[i] ? (
                                         <Image
                                             src={images[i]}
                                             alt={`Work ${i + 1}`}
                                             fill
-                                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                                             style={{ objectFit: "cover", objectPosition: "center center" }}
                                         />
                                     ) : (
@@ -151,7 +155,7 @@ export default function SelectedWorksSection({
                                             style={{
                                                 background: `linear-gradient(135deg, ${textColor === "#000" ? "#ddd" : "#444"} 0%, ${textColor === "#000" ? "#bbb" : "#333"} 100%)`,
                                                 color: textColor === "#000" ? "#888" : "#777",
-                                            }}
+                                             }}
                                         >
                                             <span className="px-4 text-xs">Work Sample {i + 1}</span>
                                         </div>
@@ -159,9 +163,9 @@ export default function SelectedWorksSection({
                                 </div>
                             </StaggerItem>
                         ))}
-                    </div>
-                )}
-            </StaggerContainer>
+                    </StaggerContainer>
+                </div>
+            )}
         </section>
     );
 }

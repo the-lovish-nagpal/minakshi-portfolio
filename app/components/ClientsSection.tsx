@@ -20,7 +20,7 @@ export default function ClientsSection() {
             <div className="relative z-10 flex-1 flex flex-col px-8 md:px-16 py-8 md:py-12">
                 <div className="flex items-start justify-between mb-8">
                     <FadeInLeft>
-                        <span className="font-display text-5xl md:text-7xl text-white/40 leading-none">15</span>
+                        <span className="font-display text-5xl md:text-7xl text-white/40 leading-none">16</span>
                     </FadeInLeft>
                     <FadeIn delay={0.2}>
                         <h2 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-tight uppercase text-center flex-1">
